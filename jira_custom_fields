@@ -1,0 +1,45 @@
+# Jira Custom Fields Reference
+
+This document maps Jira custom field IDs to their corresponding field names. Use this reference when working with Jira API or tools that require custom field IDs.
+
+## Field Mappings
+
+| Custom Field ID | Field Name | Type | Description |
+|----------------|------------|------|-------------|
+| customfield_36004 | AMES - Project | dropdown | Used to specify the AMES project associated with a ticket |
+| customfield_37928 | Automation API | dropdown | Used to specify API automation information |
+| customfield_37929 | Automation UI | dropdown | Used to specify UI automation information |
+
+## Usage Examples
+
+### Updating a Custom Field
+
+```javascript
+// Example using the mcp_jira-mcp_updateCustomField tool
+mcp_jira-mcp_updateCustomField({
+  customFieldId: "customfield_36004",
+  issueKey: "AASPIFRE-15569",
+  fieldType: "dropdown",
+  value: "CIS"
+});
+```
+
+## Notes
+
+- When adding new fields to this reference, include the field type (text, dropdown, multiselect, number, date, etc.)
+- For dropdown fields, it's helpful to know the available options
+- Fields may have different behaviors in different projects
+
+## Common Custom Field Types
+
+- **text**: Simple text fields
+- **dropdown**: Single-select dropdown menus
+- **multiselect**: Multi-select dropdown menus
+- **number**: Numeric fields
+- **date**: Date fields
+- **checkbox**: Boolean fields
+- **radiobuttons**: Radio button selection
+
+---
+
+*Last Updated: October 21, 2025*
