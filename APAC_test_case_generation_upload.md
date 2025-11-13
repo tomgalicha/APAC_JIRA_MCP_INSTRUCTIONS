@@ -1,4 +1,12 @@
-# Jira Test Case Creation and Upload File Generation
+# Jira Test Case Creation
+
+**IMPORTANT: All test cases MUST be generated and presented in TABLE VIEW format for easy review and processing.**
+
+**DO NOT create the Excel file automatically. Always wait for explicit confirmation or "go signal" from the user before proceeding with Excel file generation.**
+
+**When go signal is received use APAC_test_case_file_generation.md file as instruction on generating excel file**
+
+**DO NOT CREATE JIRA TICKET**
 
 ## Template Format
 
@@ -34,26 +42,28 @@ NOTE: Include the APACINTAKE ticket in the Description field for traceability (e
 8. *Test Priority*: it should be based on the criticality of the scenario
 
 
+## Output Format Requirements
+
+### Table View Generation
+When generating test cases, **ALWAYS present them in table format** with the following columns:
+- Test Plan
+- Test Case ID
+- Test Scenario
+- Preconditions
+- Action
+- Expected Results
+- Test Priority
+- APACITINTAKE Ticket
+
+The table should be clearly structured and easy to read, with each test case as a separate row.
+
 ## Examples
 
 ### Example for Manual Test 
-Test Plan: APACITINTAKE-3436: PRM Spex Check Outcome for Devices & Gadget
-APACITINTAKE TICKET: APACITINTAKE-3436
+#### Example Table Format:
 
-Test Scenario:
--Verify MobileSwopFam customer will complete the ChurnSave Journey
+TEST PLAN :  APACITINTAKE-3436: PRM Spex Check Outcome for Devices & Gadget 
 
-Preconditions:
-- User should have a non Mobile Starter program to complete
-the Churnsave Journey
-
-Action:
-1. Log in to ChurnSave using mdn with non MobileStarter program
-2. Click Cancel my subscription
-
-Expected Results:
-- Succesffully terminated the customer program
-
-Test Priority:
-- High
-
+|Test Case ID|Test Scenario | Preconditions | Action | Expected Results | Test Priority | APACITINTAKE Ticket |
+|-----------|-----------|-------------|---------------|---------------|--------|------------------|---------------|-------------------|
+|TST_001| Verify MobileSwopFam customer will complete the ChurnSave Journey | User should have a non Mobile Starter program to complete the Churnsave Journey | 1. Log in to ChurnSave using mdn with non MobileStarter program<br>2. Click Cancel my subscription | Successfully terminated the customer program | High | APACITINTAKE-3436 |
